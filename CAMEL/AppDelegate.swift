@@ -1,11 +1,3 @@
-//
-//  AppDelegate.swift
-//  LazyViewer
-//
-//  Created by Kenneth Bongort on 8/23/20.
-//  Copyright © 2020 Kenneth Bongort. All rights reserved.
-//
-
 import Cocoa
 import NIO
 import GRPC
@@ -31,51 +23,22 @@ let points: [Int:CGPoint] = [
 class AppDelegate: NSObject, NSApplicationDelegate {
 
   var group: MultiThreadedEventLoopGroup? = nil
-  var client: ClientConnection? = nil
+  var connection: ClientConnection? = nil
 
   @IBOutlet weak var window: NSWindow!
   @IBOutlet weak var view: NSView!
+  var lightViews: [LightView] = []
 
   func applicationDidFinishLaunching(_ aNotification: Notification) {
     // Insert code here to initialize your application
 
-    let lightViews = addLightViews()
+    addLightViews()
 
     group = MultiThreadedEventLoopGroup(numberOfThreads: 1)
-
-    let channel = ClientConnection.insecure(group: group!)
-      .connect(host: "localhost", port: 1427)
-    let client = RPC_LightStateServiceClient(channel: channel)
-
-    let req = RPC_LightStateStreamRequest()
-
-    var options = CallOptions()
-//    options.timeLimit = .timeout(.seconds(2))
-    let call = client.lightStateStream(req, callOptions: options) { (lightState) in
-      print("Receieved lightState: \(lightState)")
-      DispatchQueue.main.async {
-
-        for (i, color) in lightState.lightColors.enumerated() {
-          if i < lightViews.count {
-            lightViews[i].layer?.backgroundColor = CGColor(red: CGFloat(color.red) / 255.0, green: CGFloat(color.green) / 255.0, blue: CGFloat(color.blue) / 255.0, alpha: 1)
-            lightViews[i].setNeedsDisplay(lightViews[i].frame)
-          }
-        }
-      }
-    }
-    call.status.whenComplete { (result) in
-      print("done with rpc \(result)")
-    }
-
-    DispatchQueue.global().async {
-      print("Waiting for status")
-      _ = try? call.status.wait()
-      print("done")
-    }
+    connect(group: group!)
   }
 
-  func addLightViews() -> [LightView] {
-    var lightViews: [LightView] = []
+  func addLightViews() {
     for (_, position) in points.sorted(by: { $0.key < $1.key }) {
       let origin = CGPoint(x: position.x * 400, y: position.y * 60)
       let lightView = LightView(frame: NSRect(x: origin.x, y: origin.y, width: 20, height: 20))
@@ -84,11 +47,48 @@ class AppDelegate: NSObject, NSApplicationDelegate {
       view.addSubview(lightView)
       lightViews.append(lightView)
     }
-    return lightViews
   }
 
   func applicationWillTerminate(_ aNotification: Notification) {
     try? group?.syncShutdownGracefully()
+  }
+
+  // MARK - RPC Client
+
+  func connect(group: MultiThreadedEventLoopGroup) {
+    let connection = ClientConnection.insecure(group: group)
+      .connect(host: "localhost", port: 1427)
+    self.connection = connection
+    startStreaming()
+  }
+
+  func startStreaming() {
+    guard let connection = connection else { return }
+
+    let client = RPC_LightStateServiceClient(channel: connection)
+    let req = RPC_LightStateStreamRequest()
+    let options = CallOptions()
+    let call = client.lightStateStream(req, callOptions: options) { (lightState) in
+      DispatchQueue.main.async {
+        self.updateLightState(lightState)
+      }
+    }
+    call.status.whenComplete { (result) in
+      print("done with rpc \(result)")
+      DispatchQueue.main.async {
+        // Restart stream on disconnect.
+        self.startStreaming()
+      }
+    }
+  }
+
+  func updateLightState(_ lightState: RPC_LightState) {
+    for (i, color) in lightState.lightColors.enumerated() {
+      if i < lightViews.count {
+        lightViews[i].layer?.backgroundColor = CGColor(red: CGFloat(color.red) / 255.0, green: CGFloat(color.green) / 255.0, blue: CGFloat(color.blue) / 255.0, alpha: 1)
+        lightViews[i].setNeedsDisplay(lightViews[i].frame)
+      }
+    }
   }
 }
 
