@@ -1,0 +1,21 @@
+syntax = "proto3";
+
+package RPC;
+//option swift_prefix = "PB";
+
+message LightStateStreamRequest {
+}
+
+message Color {
+  int32 red = 1;
+  int32 blue = 2;
+  int32 green = 3;
+}
+
+message LightState {
+  repeated Color light_colors = 1;
+}
+
+service LightStateService {
+  rpc LightStateStream(LightStateStreamRequest) returns (stream LightState) {}
+}

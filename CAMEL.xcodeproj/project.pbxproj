@@ -1,0 +1,508 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 52;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		10258BF424F3579900013CC2 /* lazy_rpc.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10258BF324F3579900013CC2 /* lazy_rpc.pb.swift */; };
+		10258BF624F35A4B00013CC2 /* lazy_rpc.grpc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10258BF524F35A4B00013CC2 /* lazy_rpc.grpc.swift */; };
+		10258BF924F35C4000013CC2 /* GRPC in Frameworks */ = {isa = PBXBuildFile; productRef = 10258BF824F35C4000013CC2 /* GRPC */; };
+		10258BFB24F35C4000013CC2 /* CGRPCZlib in Frameworks */ = {isa = PBXBuildFile; productRef = 10258BFA24F35C4000013CC2 /* CGRPCZlib */; };
+		106DC5BA24F25494007828C1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 106DC5B924F25494007828C1 /* AppDelegate.swift */; };
+		106DC5BC24F25497007828C1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 106DC5BB24F25497007828C1 /* Assets.xcassets */; };
+		106DC5BF24F25497007828C1 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 106DC5BD24F25497007828C1 /* MainMenu.xib */; };
+		106DC5CB24F25497007828C1 /* CAMELTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 106DC5CA24F25497007828C1 /* CAMELTests.swift */; };
+		106DC5D924F35041007828C1 /* lazy_rpc.proto in Sources */ = {isa = PBXBuildFile; fileRef = 106DC5D824F35041007828C1 /* lazy_rpc.proto */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		106DC5C724F25497007828C1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 106DC5AE24F25494007828C1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 106DC5B524F25494007828C1;
+			remoteInfo = LazyViewer;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		10258BF324F3579900013CC2 /* lazy_rpc.pb.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = lazy_rpc.pb.swift; sourceTree = "<group>"; };
+		10258BF524F35A4B00013CC2 /* lazy_rpc.grpc.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = lazy_rpc.grpc.swift; sourceTree = "<group>"; };
+		106DC5B624F25494007828C1 /* CAMEL.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CAMEL.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		106DC5B924F25494007828C1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		106DC5BB24F25497007828C1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		106DC5BE24F25497007828C1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		106DC5C024F25497007828C1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		106DC5C124F25497007828C1 /* LazyViewer.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = LazyViewer.entitlements; sourceTree = "<group>"; };
+		106DC5C624F25497007828C1 /* CAMELTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CAMELTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		106DC5CA24F25497007828C1 /* CAMELTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CAMELTests.swift; sourceTree = "<group>"; };
+		106DC5CC24F25497007828C1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		106DC5D824F35041007828C1 /* lazy_rpc.proto */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.protobuf; path = lazy_rpc.proto; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		106DC5B324F25494007828C1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				10258BF924F35C4000013CC2 /* GRPC in Frameworks */,
+				10258BFB24F35C4000013CC2 /* CGRPCZlib in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		106DC5C324F25497007828C1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		106DC5AD24F25494007828C1 = {
+			isa = PBXGroup;
+			children = (
+				106DC5B824F25494007828C1 /* CAMEL */,
+				106DC5C924F25497007828C1 /* CAMELTests */,
+				106DC5B724F25494007828C1 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		106DC5B724F25494007828C1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				106DC5B624F25494007828C1 /* CAMEL.app */,
+				106DC5C624F25497007828C1 /* CAMELTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		106DC5B824F25494007828C1 /* CAMEL */ = {
+			isa = PBXGroup;
+			children = (
+				106DC5B924F25494007828C1 /* AppDelegate.swift */,
+				106DC5BB24F25497007828C1 /* Assets.xcassets */,
+				106DC5BD24F25497007828C1 /* MainMenu.xib */,
+				106DC5C024F25497007828C1 /* Info.plist */,
+				106DC5C124F25497007828C1 /* LazyViewer.entitlements */,
+				106DC5D824F35041007828C1 /* lazy_rpc.proto */,
+				10258BF324F3579900013CC2 /* lazy_rpc.pb.swift */,
+				10258BF524F35A4B00013CC2 /* lazy_rpc.grpc.swift */,
+			);
+			path = CAMEL;
+			sourceTree = "<group>";
+		};
+		106DC5C924F25497007828C1 /* CAMELTests */ = {
+			isa = PBXGroup;
+			children = (
+				106DC5CA24F25497007828C1 /* CAMELTests.swift */,
+				106DC5CC24F25497007828C1 /* Info.plist */,
+			);
+			path = CAMELTests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		106DC5B524F25494007828C1 /* CAMEL */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 106DC5CF24F25497007828C1 /* Build configuration list for PBXNativeTarget "CAMEL" */;
+			buildPhases = (
+				106DC5B224F25494007828C1 /* Sources */,
+				106DC5B324F25494007828C1 /* Frameworks */,
+				106DC5B424F25494007828C1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CAMEL;
+			packageProductDependencies = (
+				10258BF824F35C4000013CC2 /* GRPC */,
+				10258BFA24F35C4000013CC2 /* CGRPCZlib */,
+			);
+			productName = LazyViewer;
+			productReference = 106DC5B624F25494007828C1 /* CAMEL.app */;
+			productType = "com.apple.product-type.application";
+		};
+		106DC5C524F25497007828C1 /* CAMELTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 106DC5D224F25497007828C1 /* Build configuration list for PBXNativeTarget "CAMELTests" */;
+			buildPhases = (
+				106DC5C224F25497007828C1 /* Sources */,
+				106DC5C324F25497007828C1 /* Frameworks */,
+				106DC5C424F25497007828C1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				106DC5C824F25497007828C1 /* PBXTargetDependency */,
+			);
+			name = CAMELTests;
+			productName = LazyViewerTests;
+			productReference = 106DC5C624F25497007828C1 /* CAMELTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		106DC5AE24F25494007828C1 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1160;
+				LastUpgradeCheck = 1160;
+				ORGANIZATIONNAME = "Kenneth Bongort";
+				TargetAttributes = {
+					106DC5B524F25494007828C1 = {
+						CreatedOnToolsVersion = 11.6;
+					};
+					106DC5C524F25497007828C1 = {
+						CreatedOnToolsVersion = 11.6;
+						TestTargetID = 106DC5B524F25494007828C1;
+					};
+				};
+			};
+			buildConfigurationList = 106DC5B124F25494007828C1 /* Build configuration list for PBXProject "CAMEL" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 106DC5AD24F25494007828C1;
+			packageReferences = (
+				10258BF724F35C4000013CC2 /* XCRemoteSwiftPackageReference "grpc-swift" */,
+			);
+			productRefGroup = 106DC5B724F25494007828C1 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				106DC5B524F25494007828C1 /* CAMEL */,
+				106DC5C524F25497007828C1 /* CAMELTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		106DC5B424F25494007828C1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				106DC5BC24F25497007828C1 /* Assets.xcassets in Resources */,
+				106DC5BF24F25497007828C1 /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		106DC5C424F25497007828C1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		106DC5B224F25494007828C1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				10258BF624F35A4B00013CC2 /* lazy_rpc.grpc.swift in Sources */,
+				10258BF424F3579900013CC2 /* lazy_rpc.pb.swift in Sources */,
+				106DC5D924F35041007828C1 /* lazy_rpc.proto in Sources */,
+				106DC5BA24F25494007828C1 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		106DC5C224F25497007828C1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				106DC5CB24F25497007828C1 /* CAMELTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		106DC5C824F25497007828C1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 106DC5B524F25494007828C1 /* CAMEL */;
+			targetProxy = 106DC5C724F25497007828C1 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		106DC5BD24F25497007828C1 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				106DC5BE24F25497007828C1 /* Base */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		106DC5CD24F25497007828C1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		106DC5CE24F25497007828C1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		106DC5D024F25497007828C1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Manual;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = "";
+				ENABLE_HARDENED_RUNTIME = YES;
+				INFOPLIST_FILE = CAMEL/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.lazylab.CAMEL;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		106DC5D124F25497007828C1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Manual;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = "";
+				ENABLE_HARDENED_RUNTIME = YES;
+				INFOPLIST_FILE = CAMEL/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.lazylab.CAMEL;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		106DC5D324F25497007828C1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = CAMELTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				PRODUCT_BUNDLE_IDENTIFIER = com.lazylab.CAMELTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CAMEL.app/Contents/MacOS/CAMEL";
+			};
+			name = Debug;
+		};
+		106DC5D424F25497007828C1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = CAMELTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				PRODUCT_BUNDLE_IDENTIFIER = com.lazylab.CAMELTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CAMEL.app/Contents/MacOS/CAMEL";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		106DC5B124F25494007828C1 /* Build configuration list for PBXProject "CAMEL" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				106DC5CD24F25497007828C1 /* Debug */,
+				106DC5CE24F25497007828C1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		106DC5CF24F25497007828C1 /* Build configuration list for PBXNativeTarget "CAMEL" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				106DC5D024F25497007828C1 /* Debug */,
+				106DC5D124F25497007828C1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		106DC5D224F25497007828C1 /* Build configuration list for PBXNativeTarget "CAMELTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				106DC5D324F25497007828C1 /* Debug */,
+				106DC5D424F25497007828C1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		10258BF724F35C4000013CC2 /* XCRemoteSwiftPackageReference "grpc-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/grpc/grpc-swift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = "1.0.0-alpha.12";
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		10258BF824F35C4000013CC2 /* GRPC */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 10258BF724F35C4000013CC2 /* XCRemoteSwiftPackageReference "grpc-swift" */;
+			productName = GRPC;
+		};
+		10258BFA24F35C4000013CC2 /* CGRPCZlib */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 10258BF724F35C4000013CC2 /* XCRemoteSwiftPackageReference "grpc-swift" */;
+			productName = CGRPCZlib;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = 106DC5AE24F25494007828C1 /* Project object */;
+}
