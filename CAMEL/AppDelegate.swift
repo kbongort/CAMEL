@@ -47,6 +47,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
   func connect(group: MultiThreadedEventLoopGroup) {
     let connection = ClientConnection.insecure(group: group)
+      .withConnectionBackoff(fixed: .seconds(2))
       .connect(host: "localhost", port: 1427)
     self.connection = connection
     startStreaming()
